@@ -1,0 +1,9 @@
+These images are all of the example RV Link default dashboard included in the image as configured on my personal RV.
+Each picture shows shortcuts to the other tabs across the top and the buttons available on that tab below
+0  lighting tab
+1  shades
+2  locks
+3  floor heat
+4  water and tanks
+5  Energy tab: batteries
+6  Energy tab: energy flow configured

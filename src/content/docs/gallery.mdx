@@ -1,0 +1,97 @@
+---
+title: Gallery
+description: Photos and screenshots of the RV Link hardware, wiring, home assistant dashboards, and in-coach installation.
+head:
+  - tag: meta
+    attrs:
+      property: og:title
+      content: RV Link Gallery - Hardware & Dashboards
+  - tag: meta
+    attrs:
+      property: og:description
+      content: View photos of RV Link hardware assembly, Home Assistant dashboards, and installation examples.
+  - tag: meta
+    attrs:
+      property: og:image
+      content: https://rvlink.app/img/dashboards/rvlink/view_0.png
+  - tag: meta
+    attrs:
+      property: og:type
+      content: website
+  - tag: meta
+    attrs:
+      name: twitter:card
+      content: summary_large_image
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Hardware Assembly & Wiring
+
+These photos show the detailed process of assembling the RV Link hardware.
+
+<CardGrid>
+    <Card title="Start: Board Prep" icon="setting">
+        ![Close up of Waveshare CAN hat 120 ohm resistor jumper pins showing the left jumper in the incorrect position and the right jumper in the correct position with the 120 ohm resistor off.](/img/assembly/assembly_1.jpg)
+        Check your jumpers: 120 ohm resistor should be OFF for most integrations (Right jumper in correct position).
+    </Card>
+    <Card title="Thermal Management">
+        ![raspberry pi with the heat transfer pads before being installed on the pi](/img/assembly/assembly_8.jpg)
+        Apply heat transfer pads to the Raspberry Pi.
+    </Card>
+    <Card title="NVMe Adapter">
+        ![top down view of the pi with the Waveshare PCIe To M.2 Adapter Board (E) installed and the standoffs installed in all 4 corners, no nvme installed](/img/assembly/assembly_20.jpg)
+        Install the Waveshare PCIe To M.2 Adapter Board with standoffs.
+    </Card>
+    <Card title="NVMe Installation">
+        ![top down view of the pi with the Waveshare PCIe To M.2 Adapter Board (E) installed and the standoffs installed in all 4 corners with nvme installed](/img/assembly/assembly_21.jpg)
+        Secure the NVMe drive to the adapter board.
+    </Card>
+    <Card title="CAN HAT Installation">
+        ![top down view of the "Waveshare CAN HAT +" installed on the top of the pi using the 4 standoffs](/img/assembly/assembly_22.jpg)
+        Mount the Waveshare CAN HAT + on top of the stack.
+    </Card>
+    <Card title="Side View">
+        ![side view "Waveshare CAN HAT +" installed on the pi showing how the HAT header slides over the pi pins](/img/assembly/assembly_23.jpg)
+        Ensure the GPIO header is fully seated.
+    </Card>
+    <Card title="Power Connection">
+        ![view of the PCIe To M.2 Adapter Board (E) power supply cable connected to the HAT](/img/assembly/assembly_24.jpg)
+        Connect the power supply cable between the HAT and the M.2 Adapter.
+    </Card>
+</CardGrid>
+
+## Home Assistant Dashboards
+
+These screenshots show examples of what your Home Assistant dashboard could look like.
+
+<CardGrid>
+    <Card title="Lighting" icon="sun">
+        ![Lighting dashboard](/img/dashboards/rvlink/view_0.png)
+        Lighting tab showing room shortcuts and zone controls.
+    </Card>
+    <Card title="Shades" icon="bars">
+        ![Shades dashboard](/img/dashboards/rvlink/view_1.png)
+        Shades control tab for window treatments.
+    </Card>
+    <Card title="Locks" icon="lock">
+        ![Locks dashboard](/img/dashboards/rvlink/view_2.png)
+        Security and door lock controls.
+    </Card>
+    <Card title="Floor Heat" icon="fire">
+        ![Floor heat dashboard](/img/dashboards/rvlink/view_3.png)
+        Floor heating zones and temperature management.
+    </Card>
+    <Card title="Water & Tanks" icon="drop">
+        ![Water and tanks dashboard](/img/dashboards/rvlink/view_4.png)
+        Water systems control and tank level monitoring.
+    </Card>
+    <Card title="Energy: Batteries" icon="battery-charging">
+        ![Battery dashboard](/img/dashboards/rvlink/view_5.png)
+        Battery state of charge and electrical status.
+    </Card>
+    <Card title="Energy: Flow" icon="chart-bar">
+        ![Energy flow dashboard](/img/dashboards/rvlink/view_6.png)
+        Visualizing real-time energy flow and consumption.
+    </Card>
+</CardGrid>

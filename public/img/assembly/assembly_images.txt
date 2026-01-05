@@ -1,0 +1,23 @@
+Assembly
+1 Close up of Waveshare CAN hat 120 ohm resistor jumper pins showing the left jumper in the incorrect position and the right jumper in the correct position with the 120 ohm resistor off.
+3 various screws included with the case
+5 top down view of the raspberry pi sitting inside the case before the top is put on
+6 close up of the raspberry pi fan connection with the small cover still on that needs to be removed before connecting the fan
+7 clows up of the pi fan connection with the cover removed
+8 raspberry pi with the heat transfer pads before being installed on the pi
+9 close up of removing the thin plastic backing from the heat transfer pads after installing them in the pi in preparation for installing the heat sink and fan
+12 "Waveshare PCIe To M.2 Adapter Board (E)" with NVME installed before installing into pi
+13 bottom view of pi with Waveshare PCIe To M.2 Adapter Board (E) installed showing position of the screws 
+14 top view of Waveshare PCIe To M.2 Adapter Board (E) installed onto pi before the nvme is installed and without the fan connected
+15 close up showing how to gently lift the clip that holds the pcie ribbon connecting to the pi
+16 shows the pcie ribbon fully connected to both the pi and the waveshare board
+18 shows how the brass standoffs are assembled to mount the pi inside the case
+19 the fan cable connected to the pi
+20 top down view of the pi with the Waveshare PCIe To M.2 Adapter Board (E) installed and the standoffs installed in all 4 corners, no nvme installed
+21 top down view of the pi with the Waveshare PCIe To M.2 Adapter Board (E) installed and the standoffs installed in all 4 corners with nvme installed
+22 top down view of the "Waveshare CAN HAT +" installed on the top of the pi using the 4 standoffs
+23 side view "Waveshare CAN HAT +" installed on the pi showing how the HAT header slides over the pi pins
+24 view of the PCIe To M.2 Adapter Board (E) power supply cable connected to the HAT
+
+
+

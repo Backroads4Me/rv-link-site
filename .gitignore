@@ -25,3 +25,24 @@ pnpm-debug.log*
 .dev.vars*
 !.dev.vars.example
 !.env.example
+
+# IDE and editor files
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+
+# Claude Code configuration and documentation
+.claude/
+CLAUDE.md
+.claude/settings.local.json
+
+# Build artifacts
+*.tsbuildinfo
+
+# Test coverage
+coverage/

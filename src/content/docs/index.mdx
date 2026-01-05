@@ -1,40 +1,114 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: RV Link - RV-C to Home Assistant
+description: RV Link bridges RV‑C CAN networks with Home Assistant using Node‑RED and an MQTT CAN bridge.
+template: splash
+head:
+  - tag: meta
+    attrs:
+      property: og:title
+      content: RV Link - RV-C to Home Assistant
+  - tag: meta
+    attrs:
+      property: og:description
+      content: Control and monitor your RV's systems from Home Assistant. Auto-discovery, real-time monitoring, and customizable dashboards.
+  - tag: meta
+    attrs:
+      property: og:image
+      content: https://rvlink.app/img/social-card.jpg
+  - tag: meta
+    attrs:
+      property: og:type
+      content: website
+  - tag: meta
+    attrs:
+      property: og:url
+      content: https://rvlink.app/
+  - tag: meta
+    attrs:
+      name: twitter:card
+      content: summary_large_image
+  - tag: meta
+    attrs:
+      name: twitter:title
+      content: RV Link - RV-C to Home Assistant
+  - tag: meta
+    attrs:
+      name: twitter:description
+      content: Control and monitor your RV's systems from Home Assistant. Auto-discovery, real-time monitoring, and customizable dashboards.
+  - tag: meta
+    attrs:
+      name: twitter:image
+      content: https://rvlink.app/img/social-card.jpg
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Connect Your RV to Home Assistant. Control and monitor your systems from a beautiful, modern dashboard.
   image:
-    file: ../../assets/houston.webp
+    file: ~/assets/logo.svg
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Learn How it Works
+      link: /getting-started/introduction/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+      variant: primary
+    - text: Get a Unit
+      link: /purchase/
       icon: external
-      variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Why Choose RV Link?
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Total Control" icon="setting">
+		Manage your lights, shades, locks, pumps, and HVAC systems from a single interface, whether you're inside the coach or miles away.
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Real-Time Monitoring" icon="magnifier">
+		Keep an eye on tank levels, battery voltage, charger/inverter status, and generator performance with at-a-glance dashboards.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Open & Extensible" icon="puzzle">
+		Built on open-source software, RV Link is fully customizable. Add support for new devices or integrate with other smart home platforms.
 	</Card>
 </CardGrid>
+
+## Key Features
+
+- **Auto-Discovery:** Automatically finds compatible RV-C devices and creates Home Assistant entities.
+- **Bidirectional Communication:** Read real-time status from your RV and send commands back to control devices.
+- **Comprehensive Device Support:** Works with a wide range of standard RV-C devices.
+- **Reliable & Offline-Capable:** Runs entirely inside your RV.
+- **DIY Friendly:** Detailed guides for building the hardware.
+
+## How It Works
+
+1. **CAN Bridge Hardware:** Raspberry Pi with CAN HAT connects to RV-C network.
+2. **CAN to MQTT Software:** Reads messages and publishes to MQTT.
+3. **Node-RED Processing:** Decodes data for Home Assistant.
+4. **Home Assistant Integration:** Auto-configures entities via MQTT Discovery.
+
+[See the Full Architecture](/getting-started/introduction/)
+
+## Gallery Preview
+
+<CardGrid>
+	<Card title="Dashboards">
+		![Dashboard](/img/dashboards/rvlink/view_0.png)
+	</Card>
+	<Card title="Hardware">
+		![Hardware](/img/assembly/assembly_1.jpg)
+	</Card>
+</CardGrid>
+
+<div style="text-align: center; margin-top: 2rem;">
+    [View Full Gallery](/gallery/)
+</div>
+
+## Ready to Get Started?
+
+<CardGrid>
+    <Card title="Build It Yourself" icon="pencil">
+        [Hardware Guide](/hardware/assembly/)
+    </Card>
+    <Card title="Buy Pre-Assembled" icon="cart">
+        [Purchase](/purchase/)
+    </Card>
+</CardGrid>
+

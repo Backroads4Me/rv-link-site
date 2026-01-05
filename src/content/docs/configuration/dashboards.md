@@ -1,0 +1,308 @@
+---
+title: "Creating Custom Dashboards"
+description: "Create custom Home Assistant dashboards for your RV with examples, YAML configurations, and community-shared layouts."
+---
+
+Once you've [identified your switches](/configuration/identifying-switches/), it's time to create beautiful, functional dashboards tailored to your RV's layout.
+
+## Dashboard Gallery
+
+Check out examples from the community:
+
+<div className="dashboard-gallery">
+  <img src="/img/dashboards/rvlink/view_0.png" alt="Lighting dashboard" />
+  <p>Lighting controls organized by room and zone</p>
+
+  <img src="/img/dashboards/rvlink/view_1.png" alt="Shades dashboard" />
+  <p>Shade controls for all windows and skylights</p>
+
+  <img src="/img/dashboards/rvlink/view_2.png" alt="Locks dashboard" />
+  <p>Door locks and security controls</p>
+
+  <img src="/img/dashboards/rvlink/view_3.png" alt="Floor heat dashboard" />
+  <p>Floor heating zones and temperature control</p>
+
+  <img src="/img/dashboards/rvlink/view_4.png" alt="Water and tanks dashboard" />
+  <p>Tank levels and water system controls</p>
+
+  <img src="/img/dashboards/rvlink/view_5.png" alt="Battery dashboard" />
+  <p>Battery monitoring and state of charge</p>
+
+  <img src="/img/dashboards/rvlink/view_6.png" alt="Energy flow dashboard" />
+  <p>Real-time energy flow visualization</p>
+</div>
+
+## Creating Your First Dashboard
+
+### Step 1: Plan Your Layout
+
+Before diving into Home Assistant, sketch out what you want:
+
+- **By Function**: Lights, Climate, Water, Power
+- **By Location**: Bedroom, Living Area, Galley, Exterior
+- **By Use Case**: Daily Controls, Monitoring, System Status
+
+Most RV owners find a hybrid approach works best: primary tabs by function, with location-based sections within each tab.
+
+### Step 2: Create a New Dashboard
+
+1. Go to **Settings** → **Dashboards**
+2. Click **+ Add Dashboard** in the bottom right
+3. Choose a name (e.g., "My RV")
+4. Select **Start with an empty dashboard**
+
+### Step 3: Add Views (Tabs)
+
+Create tabs for different areas:
+
+1. Click the **✏️ Edit** button
+2. Click the **+ Add View** button
+3. Create views for each area:
+   - Lighting
+   - Climate
+   - Water & Tanks
+   - Power & Batteries
+   - Security
+   - Systems
+
+### Step 4: Add Cards
+
+For each view, add cards to display and control your devices.
+
+#### Common Card Types
+
+**Entities Card** - Best for lists of related controls:
+```yaml
+type: entities
+title: Living Area Lights
+entities:
+  - entity: switch.overhead_lights
+    name: Overhead
+  - entity: switch.reading_lights
+    name: Reading Lights
+  - entity: switch.accent_lights
+    name: Accent
+```
+
+**Grid Card** - Best for button layouts:
+```yaml
+type: grid
+columns: 2
+cards:
+  - type: button
+    entity: switch.patio_light
+    name: Patio
+  - type: button
+    entity: switch.awning_light
+    name: Awning
+```
+
+**Gauge Card** - Best for tank levels:
+```yaml
+type: gauge
+entity: sensor.tank_fresh_water
+min: 0
+max: 100
+name: Fresh Water
+```
+
+**Energy Distribution Card** - For power flow:
+```yaml
+type: energy-distribution
+entities:
+  - entity: sensor.solar_power
+  - entity: sensor.battery_power
+  - entity: sensor.load_power
+```
+
+### Example: Lighting Dashboard
+
+```yaml
+views:
+  - title: Lighting
+    path: lighting
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: "## Interior Lights"
+
+          - type: grid
+            columns: 3
+            cards:
+              - type: button
+                entity: switch.galley_lights
+                name: Galley
+                icon: mdi:silverware-fork-knife
+
+              - type: button
+                entity: switch.living_lights
+                name: Living
+                icon: mdi:sofa
+
+              - type: button
+                entity: switch.bedroom_lights
+                name: Bedroom
+                icon: mdi:bed
+
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: "## Exterior Lights"
+
+          - type: grid
+            columns: 2
+            cards:
+              - type: button
+                entity: switch.patio_light
+                name: Patio
+                icon: mdi:outdoor-lamp
+
+              - type: button
+                entity: switch.entry_light
+                name: Entry
+                icon: mdi:door
+```
+
+## Using YAML vs. Visual Editor
+
+Home Assistant supports two methods for creating dashboards:
+
+### Visual Editor (Recommended for Beginners)
+- Click-and-drag interface
+- Easy to get started
+- Some limitations on advanced customization
+
+### YAML Mode (Recommended for Sharing)
+- Full control over layout and styling
+- Easy to copy/paste and share
+- Requires learning YAML syntax
+
+**Pro Tip**: Start with the visual editor, then switch to YAML when you want to fine-tune or share your configuration.
+
+## Exporting Your Dashboard
+
+To share your dashboard with the community:
+
+1. Open your dashboard
+2. Click **✏️ Edit**
+3. Click the **⋮** menu in the top right
+4. Select **Raw configuration editor**
+5. Copy the entire YAML configuration
+6. Save it to a file (e.g., `my-rv-dashboard.yaml`)
+
+## Importing a Dashboard
+
+To use a dashboard shared by the community:
+
+1. Go to **Settings** → **Dashboards**
+2. Click **+ Add Dashboard**
+3. Give it a name
+4. Click **Create**
+5. Click **✏️ Edit**
+6. Click the **⋮** menu → **Raw configuration editor**
+7. Paste the YAML configuration
+8. Click **Save**
+
+:::warning Entity IDs Must Match
+When importing a dashboard from someone else, you'll need to update the entity IDs to match your system. For example, if their dashboard has `switch.galley_light` but yours is `switch.kitchen_light`, you'll need to find and replace those entity IDs.
+:::
+
+## Advanced Techniques
+
+### Custom Button Row Card
+
+Install the [Button Card](https://github.com/custom-cards/button-card) from HACS for highly customizable buttons.
+
+### Picture Elements Card
+
+Use images of your actual RV layout with clickable controls overlaid on top:
+
+```yaml
+type: picture-elements
+image: /local/rv-floorplan.png
+elements:
+  - type: state-icon
+    entity: switch.galley_lights
+    tap_action:
+      action: toggle
+    style:
+      top: 45%
+      left: 30%
+```
+
+### Conditional Cards
+
+Show cards only when relevant:
+
+```yaml
+type: conditional
+conditions:
+  - entity: binary_sensor.generator_running
+    state: "on"
+card:
+  type: entities
+  title: Generator Status
+  entities:
+    - sensor.generator_runtime
+    - sensor.generator_load
+```
+
+### Custom Themes
+
+Apply custom color schemes to match your RV or personal style. See [Home Assistant Themes](https://www.home-assistant.io/integrations/frontend/#themes) for more info.
+
+## Community Dashboard Sharing
+
+### Finding Dashboards for Your RV
+
+1. Visit the [RV-Link Forum](https://forum.rvlink.app)
+2. Navigate to your RV manufacturer's category (e.g., Newmar, Tiffin, Entegra)
+3. Browse posts tagged with your model and year
+4. Download YAML files shared by other users
+
+### Sharing Your Dashboard
+
+Help grow the community by sharing your dashboard:
+
+1. Export your dashboard YAML
+2. Take screenshots of each view
+3. Create a forum post in your RV manufacturer's category
+4. Include:
+   - RV make, model, and year
+   - Description of your layout
+   - Screenshots
+   - YAML file (as an attachment or code block)
+   - Any custom cards or integrations required
+
+## Tips for Great Dashboards
+
+1. **Keep it simple**: Don't overwhelm yourself with too many cards
+2. **Group logically**: Put related controls together
+3. **Use icons**: Visual icons are faster to recognize than text
+4. **Test on mobile**: Most RV owners use tablets or phones
+5. **Iterate**: Your first dashboard won't be perfect—refine as you use it
+6. **Match your workflow**: Design around how you actually use your RV
+
+## Troubleshooting
+
+### Entity not available
+- Verify the entity exists in Home Assistant
+- Check if the device is online and reporting
+- Ensure spelling is correct (entity IDs are case-sensitive)
+
+### Card won't display
+- Check YAML syntax for errors
+- Ensure required integrations are installed
+- Check browser console for errors (F12)
+
+### Dashboard is slow
+- Reduce the number of cards/entities per view
+- Remove auto-updating cards for devices you rarely check
+- Use conditional cards to hide unnecessary elements
+
+## What's Next?
+
+- Set up [automations](../automation/examples) to make your RV smarter
+- Explore [advanced monitoring](../monitoring/energy-tracking) for detailed insights
+- Share your dashboard on the [forum](https://forum.rvlink.app)
