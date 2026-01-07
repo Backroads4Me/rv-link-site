@@ -2,9 +2,10 @@
 # https://pagescms.org
 
 name: RV Link Docs
+
 media:
   input: src/assets
-  output: /src/assets
+  output: src/assets
 
 components:
   metadata:
@@ -21,25 +22,18 @@ components:
         required: true
 
 content:
-  # Quick start pages in root docs folder
+  # ---------------------------------------
+  # Start Here (root docs)
+  # ---------------------------------------
   - name: start-here
-    label: 🚀 Start Here
+    label: "🚀 Start Here"
     type: collection
     path: src/content/docs
     format: yaml-frontmatter
-    exclude:
-      - getting-started/**
-      - installation/**
-      - hardware/**
-      - configuration/**
-      - automation/**
-      - monitoring/**
-      - troubleshooting/**
-      - concepts/**
     view:
       fields:
-        - name: title
-        - name: description
+        - title
+        - description
     fields:
       - name: title
         label: Title
@@ -58,21 +52,23 @@ content:
             type: string
           - name: attrs
             label: Attributes
-            type: object
+            type: map
       - name: body
         label: Content
         type: rich-text
 
-  # Getting Started guides
+  # ---------------------------------------
+  # Getting Started
+  # ---------------------------------------
   - name: getting-started
-    label: 📖 Getting Started
+    label: "📖 Getting Started"
     type: collection
     path: src/content/docs/getting-started
     format: yaml-frontmatter
     view:
       fields:
-        - name: title
-        - name: description
+        - title
+        - description
     fields:
       - name: title
         label: Title
@@ -86,16 +82,18 @@ content:
         label: Content
         type: rich-text
 
-  # Installation guides
+  # ---------------------------------------
+  # Installation
+  # ---------------------------------------
   - name: installation
-    label: 🛠️ Installation
+    label: "🛠️ Installation"
     type: collection
     path: src/content/docs/installation
     format: yaml-frontmatter
     view:
       fields:
-        - name: title
-        - name: description
+        - title
+        - description
     fields:
       - name: title
         label: Title
@@ -109,16 +107,18 @@ content:
         label: Content
         type: rich-text
 
-  # Hardware documentation
+  # ---------------------------------------
+  # Hardware
+  # ---------------------------------------
   - name: hardware
-    label: 🔌 Hardware
+    label: "🔌 Hardware"
     type: collection
     path: src/content/docs/hardware
     format: yaml-frontmatter
     view:
       fields:
-        - name: title
-        - name: description
+        - title
+        - description
     fields:
       - name: title
         label: Title
@@ -132,16 +132,18 @@ content:
         label: Content
         type: rich-text
 
-  # Configuration guides
+  # ---------------------------------------
+  # Configuration
+  # ---------------------------------------
   - name: configuration
-    label: ⚙️ Configuration
+    label: "⚙️ Configuration"
     type: collection
     path: src/content/docs/configuration
     format: yaml-frontmatter
     view:
       fields:
-        - name: title
-        - name: description
+        - title
+        - description
     fields:
       - name: title
         label: Title
@@ -155,16 +157,18 @@ content:
         label: Content
         type: rich-text
 
-  # Automation examples
+  # ---------------------------------------
+  # Automation
+  # ---------------------------------------
   - name: automation
-    label: 🤖 Automation
+    label: "🤖 Automation"
     type: collection
     path: src/content/docs/automation
     format: yaml-frontmatter
     view:
       fields:
-        - name: title
-        - name: description
+        - title
+        - description
     fields:
       - name: title
         label: Title
@@ -178,16 +182,18 @@ content:
         label: Content
         type: rich-text
 
-  # Monitoring features
+  # ---------------------------------------
+  # Monitoring
+  # ---------------------------------------
   - name: monitoring
-    label: 📊 Monitoring
+    label: "📊 Monitoring"
     type: collection
     path: src/content/docs/monitoring
     format: yaml-frontmatter
     view:
       fields:
-        - name: title
-        - name: description
+        - title
+        - description
     fields:
       - name: title
         label: Title
@@ -201,16 +207,18 @@ content:
         label: Content
         type: rich-text
 
-  # Troubleshooting guides
+  # ---------------------------------------
+  # Troubleshooting
+  # ---------------------------------------
   - name: troubleshooting
-    label: 🔧 Troubleshooting
+    label: "🔧 Troubleshooting"
     type: collection
     path: src/content/docs/troubleshooting
     format: yaml-frontmatter
     view:
       fields:
-        - name: title
-        - name: description
+        - title
+        - description
     fields:
       - name: title
         label: Title
@@ -224,16 +232,18 @@ content:
         label: Content
         type: rich-text
 
-  # Core concepts
+  # ---------------------------------------
+  # Core Concepts
+  # ---------------------------------------
   - name: concepts
-    label: 💡 Concepts
+    label: "💡 Concepts"
     type: collection
     path: src/content/docs/concepts
     format: yaml-frontmatter
     view:
       fields:
-        - name: title
-        - name: description
+        - title
+        - description
     fields:
       - name: title
         label: Title
