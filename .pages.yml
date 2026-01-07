@@ -1,0 +1,124 @@
+# Pages CMS Configuration for RV Link Documentation Site
+# https://pagescms.org
+
+# Site configuration
+name: RV Link Docs
+media:
+  input: src/assets
+  output: /src/assets
+
+collections:
+  - name: start-here
+    label: 🚀 Start Here
+    path: src/content/docs
+    type: collection
+    extension: mdx
+    format: frontmatter
+    filter:
+      field: path
+      operator: matches
+      value: "^(gallery|purchase)"
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: text, required: true }
+      - { name: body, label: Content, type: rich-text }
+
+  - name: installation
+    label: 🛠 Installation
+    path: src/content/docs/installation
+    type: collection
+    extension: mdx
+    format: frontmatter
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: text, required: true }
+      - { name: body, label: Content, type: rich-text }
+
+  - name: hardware
+    label: 🔌 Hardware
+    path: src/content/docs/hardware
+    type: collection
+    extension: mdx
+    format: frontmatter
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: text, required: true }
+      - { name: body, label: Content, type: rich-text }
+
+  # Installation
+  - name: installation
+    label: Installation
+    path: src/content/docs/installation
+    view:
+      fields:
+        - { name: title, label: Title, type: string }
+        - { name: description, label: Description, type: text }
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: text, required: true }
+      - { name: body, label: Content, type: rich-text }
+
+  # Configuration
+  - name: configuration
+    label: Configuration
+    path: src/content/docs/configuration
+    view:
+      fields:
+        - { name: title, label: Title, type: string }
+        - { name: description, label: Description, type: text }
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: text, required: true }
+      - { name: body, label: Content, type: rich-text }
+
+  # Automation
+  - name: automation
+    label: Automation
+    path: src/content/docs/automation
+    view:
+      fields:
+        - { name: title, label: Title, type: string }
+        - { name: description, label: Description, type: text }
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: text, required: true }
+      - { name: body, label: Content, type: rich-text }
+
+  # Monitoring
+  - name: monitoring
+    label: Monitoring
+    path: src/content/docs/monitoring
+    view:
+      fields:
+        - { name: title, label: Title, type: string }
+        - { name: description, label: Description, type: text }
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: text, required: true }
+      - { name: body, label: Content, type: rich-text }
+
+  # Troubleshooting
+  - name: troubleshooting
+    label: Troubleshooting
+    path: src/content/docs/troubleshooting
+    view:
+      fields:
+        - { name: title, label: Title, type: string }
+        - { name: description, label: Description, type: text }
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: text, required: true }
+      - { name: body, label: Content, type: rich-text }
+
+  # Concepts
+  - name: concepts
+    label: Concepts
+    path: src/content/docs/concepts
+    view:
+      fields:
+        - { name: title, label: Title, type: string }
+        - { name: description, label: Description, type: text }
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: text, required: true }
+      - { name: body, label: Content, type: rich-text }
