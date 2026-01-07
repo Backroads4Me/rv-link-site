@@ -64,13 +64,7 @@ content:
                 type: string
               - name: variant
                 label: Badge Style
-                type: select
-                options:
-                  - tip
-                  - caution
-                  - danger
-                  - success
-                  - note
+                type: string
       - name: draft
         label: Draft (hide from production)
         type: boolean
@@ -129,13 +123,7 @@ content:
                 type: string
               - name: variant
                 label: Badge Style
-                type: select
-                options:
-                  - tip
-                  - caution
-                  - danger
-                  - success
-                  - note
+                type: string
       - name: draft
         label: Draft (hide from production)
         type: boolean
@@ -194,13 +182,7 @@ content:
                 type: string
               - name: variant
                 label: Badge Style
-                type: select
-                options:
-                  - tip
-                  - caution
-                  - danger
-                  - success
-                  - note
+                type: string
       - name: draft
         label: Draft (hide from production)
         type: boolean
@@ -259,13 +241,7 @@ content:
                 type: string
               - name: variant
                 label: Badge Style
-                type: select
-                options:
-                  - tip
-                  - caution
-                  - danger
-                  - success
-                  - note
+                type: string
       - name: draft
         label: Draft (hide from production)
         type: boolean
@@ -324,13 +300,7 @@ content:
                 type: string
               - name: variant
                 label: Badge Style
-                type: select
-                options:
-                  - tip
-                  - caution
-                  - danger
-                  - success
-                  - note
+                type: string
       - name: draft
         label: Draft (hide from production)
         type: boolean
@@ -389,13 +359,7 @@ content:
                 type: string
               - name: variant
                 label: Badge Style
-                type: select
-                options:
-                  - tip
-                  - caution
-                  - danger
-                  - success
-                  - note
+                type: string
       - name: draft
         label: Draft (hide from production)
         type: boolean
