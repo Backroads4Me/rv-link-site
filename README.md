@@ -10,4 +10,4 @@ It is built with [Astro](https://astro.build) and the [Starlight](https://starli
 
 ## Contributing
 
-Pull requests are welcome! Please ensure any new content follows the existing structure and images are added to `public/img`.
+Pull requests are welcome! Please ensure any new content follows the existing structure and images are added to `src/assets/`.

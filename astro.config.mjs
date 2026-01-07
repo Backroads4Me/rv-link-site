@@ -34,7 +34,6 @@ export default defineConfig({
         {
           label: 'Start Here',
           items: [
-            { label: 'Gallery', slug: 'gallery' },
             { label: 'Build or Buy', slug: 'purchase' },
           ],
         },

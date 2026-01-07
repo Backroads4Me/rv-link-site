@@ -7,7 +7,7 @@ This guide is for advanced users who want complete control over their installati
 
 ## Prerequisites
 
-- **Assembled hardware** following the [Hardware Assembly Guide](../hardware/assembly)
+- **Assembled hardware** following the [Hardware Assembly Guide](/hardware/assembly/)
 - **Home Assistant OS installed** on your NVME drive
 - **Basic understanding** of Home Assistant add-ons and YAML configuration
 - **SSH access** configured (optional but helpful)
@@ -240,8 +240,8 @@ Then reboot.
 
 ## What's Next?
 
-- [Identify your switches](../configuration/identifying-switches)
-- [Create custom dashboards](../configuration/dashboards)
+- [Identify your switches](/configuration/identifying-switches/)
+- [Create custom dashboards](/configuration/dashboards/)
 - [Join the community](https://forum.rvlink.app)
 
 ## Advanced Configuration

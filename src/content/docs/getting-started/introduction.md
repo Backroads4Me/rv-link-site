@@ -25,21 +25,21 @@ Purchase a fully built, tested, and configured device. Just plug it in and confi
 ### 2. DIY Build + Pre-Configured Image
 Build your own hardware following our detailed assembly guide, then flash our custom Home Assistant OS image. Best balance of hands-on experience and convenience.
 
-[DIY Build Guide](diy-build)
+[DIY Build Guide](/getting-started/diy-build/)
 
 ### 3. Full Manual Installation
 Build the hardware and manually install each Home Assistant add-on. Complete control for tinkerers who want to understand every component.
 
-[Manual Installation Guide](manual-install)
+[Manual Installation Guide](/getting-started/manual-install/)
 
 ## What's Next?
 
-- Learn more about [What is RV-Link](what-is-rvlink) and how it works
-- Understand [RV-C Networks](../concepts/rvc-network) and what devices are supported
+- Learn more about [What is RV-Link](/getting-started/what-is-rvlink/) and how it works
+- Understand [RV-C Networks](/concepts/rvc-network/) and what devices are supported
 - Join the [Community Forum](https://forum.rvlink.app) to see what others are building
 
 ## Need Help?
 
 - Visit our [Community Forum](https://forum.rvlink.app) for support
-- Check the [Troubleshooting Guide](../troubleshooting/common-issues)
+- Check the [Troubleshooting Guide](/troubleshooting/common-issues/)
 - Report bugs on [GitHub](https://github.com/Backroads4Me)

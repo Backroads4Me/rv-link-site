@@ -44,7 +44,7 @@ Choose one of these cases:
 
 ## Assembly Guide
 
-Follow our detailed [Hardware Assembly Guide](../hardware/assembly) for step-by-step instructions with photos.
+Follow our detailed [Hardware Assembly Guide](/hardware/assembly/) for step-by-step instructions with photos.
 
 ### Assembly Overview
 
@@ -156,13 +156,13 @@ You'll need to configure WiFi through the Home Assistant OS interface:
 
 ## What's Next?
 
-- [Identify your switches](../configuration/identifying-switches) by toggling them in your RV
-- [Create custom dashboards](../configuration/dashboards) tailored to your needs
+- [Identify your switches](/configuration/identifying-switches/) by toggling them in your RV
+- [Create custom dashboards](/configuration/dashboards/) tailored to your needs
 - [Join the community](https://forum.rvlink.app) to share your dashboard configuration
 
 ## Troubleshooting
 
-If you run into issues, check our [Troubleshooting Guide](../troubleshooting/common-issues) or ask for help on the [forum](https://forum.rvlink.app).
+If you run into issues, check our [Troubleshooting Guide](/troubleshooting/common-issues/) or ask for help on the [forum](https://forum.rvlink.app).
 
 Common issues:
 - **Can't access Home Assistant**: Make sure you're on the same network, try `http://homeassistant.local:8123` or find the Pi's IP address

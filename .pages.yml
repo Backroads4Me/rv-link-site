@@ -1,0 +1,248 @@
+# Pages CMS Configuration for RV Link Documentation Site
+# https://pagescms.org
+
+name: RV Link Docs
+media:
+  input: src/assets
+  output: /src/assets
+
+components:
+  metadata:
+    label: Page Metadata
+    type: object
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+
+content:
+  # Quick start pages in root docs folder
+  - name: start-here
+    label: 🚀 Start Here
+    type: collection
+    path: src/content/docs
+    format: yaml-frontmatter
+    exclude:
+      - getting-started/**
+      - installation/**
+      - hardware/**
+      - configuration/**
+      - automation/**
+      - monitoring/**
+      - troubleshooting/**
+      - concepts/**
+    view:
+      fields:
+        - name: title
+        - name: description
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: head
+        label: HTML Head Meta Tags
+        type: list
+        fields:
+          - name: tag
+            label: Tag Name
+            type: string
+          - name: attrs
+            label: Attributes
+            type: object
+      - name: body
+        label: Content
+        type: rich-text
+
+  # Getting Started guides
+  - name: getting-started
+    label: 📖 Getting Started
+    type: collection
+    path: src/content/docs/getting-started
+    format: yaml-frontmatter
+    view:
+      fields:
+        - name: title
+        - name: description
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: body
+        label: Content
+        type: rich-text
+
+  # Installation guides
+  - name: installation
+    label: 🛠️ Installation
+    type: collection
+    path: src/content/docs/installation
+    format: yaml-frontmatter
+    view:
+      fields:
+        - name: title
+        - name: description
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: body
+        label: Content
+        type: rich-text
+
+  # Hardware documentation
+  - name: hardware
+    label: 🔌 Hardware
+    type: collection
+    path: src/content/docs/hardware
+    format: yaml-frontmatter
+    view:
+      fields:
+        - name: title
+        - name: description
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: body
+        label: Content
+        type: rich-text
+
+  # Configuration guides
+  - name: configuration
+    label: ⚙️ Configuration
+    type: collection
+    path: src/content/docs/configuration
+    format: yaml-frontmatter
+    view:
+      fields:
+        - name: title
+        - name: description
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: body
+        label: Content
+        type: rich-text
+
+  # Automation examples
+  - name: automation
+    label: 🤖 Automation
+    type: collection
+    path: src/content/docs/automation
+    format: yaml-frontmatter
+    view:
+      fields:
+        - name: title
+        - name: description
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: body
+        label: Content
+        type: rich-text
+
+  # Monitoring features
+  - name: monitoring
+    label: 📊 Monitoring
+    type: collection
+    path: src/content/docs/monitoring
+    format: yaml-frontmatter
+    view:
+      fields:
+        - name: title
+        - name: description
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: body
+        label: Content
+        type: rich-text
+
+  # Troubleshooting guides
+  - name: troubleshooting
+    label: 🔧 Troubleshooting
+    type: collection
+    path: src/content/docs/troubleshooting
+    format: yaml-frontmatter
+    view:
+      fields:
+        - name: title
+        - name: description
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: body
+        label: Content
+        type: rich-text
+
+  # Core concepts
+  - name: concepts
+    label: 💡 Concepts
+    type: collection
+    path: src/content/docs/concepts
+    format: yaml-frontmatter
+    view:
+      fields:
+        - name: title
+        - name: description
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: body
+        label: Content
+        type: rich-text

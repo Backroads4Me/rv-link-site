@@ -32,7 +32,7 @@ Having trouble with RV-Link? Check these common issues and solutions before post
 
 1. **Check hardware**: Verify CAN HAT is properly seated on GPIO pins
 2. **Check power**: Ensure power cable from PCIe adapter to CAN HAT is connected
-3. **Enable interface**: The CAN interface may need to be enabled in Host OS (see [Manual Installation Guide](../getting-started/manual-install#enable-can-interface-in-host-os))
+3. **Enable interface**: The CAN interface may need to be enabled in Host OS (see [Manual Installation Guide](/getting-started/manual-install/#enable-can-interface-in-host-os))
 
 ### Add-ons Won't Start
 

@@ -166,6 +166,6 @@ Before starting from scratch, check if someone with your RV model has already sh
 
 Now that you've identified your switches, you can:
 
-- [Create custom dashboards](dashboards) tailored to your RV layout
-- [Set up automations](../automation/examples) (e.g., "Good Night" turns off all lights)
+- [Create custom dashboards](/configuration/dashboards/) tailored to your RV layout
+- [Set up automations](/automation/examples/) (e.g., "Good Night" turns off all lights)
 - Share your configuration on the [forum](https://forum.rvlink.app)
