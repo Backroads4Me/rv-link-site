@@ -7,8 +7,8 @@ dist/
 node_modules/
 
 # lock files (choose one package manager)
-package-lock.json  # If using pnpm
-# pnpm-lock.yaml   # If using npm
+# package-lock.json  # If using pnpm
+pnpm-lock.yaml   # If using npm
 
 # logs
 npm-debug.log*
